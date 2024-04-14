@@ -1,15 +1,15 @@
 pipeline {
 agent any  
 stages
-{   stage ('Job is Prepairing for Print')
-     {steps {sh 'echo "hello Jenkins Prepare to Print"'}}
+{   
+  stage ('my first job to print')
+     {steps {sh 'echo hello_jenkins'}}
 
-    stage ('Job is Ready to Print')
-     {steps {sh 'echo "hello jenkins is Ready For Print"'}}
+  stage('building the job')
+    {steps { sh 'echo code_is_building' }}
 
-    stage ('Job is Printing')
-     {steps {sh 'echo "hello Jenkins is Printing The Job"'}}
-
+  stage('deloy artifact')
+    {steps { sh 'echo code_is_deploying' }
 
 }            
 }
